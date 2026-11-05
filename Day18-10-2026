@@ -1,5 +1,5 @@
 Day 16 — Advanced CloudFormation & Multi-Region Deployments
-Ansible — Create and Start EC2 Instances
+🔹 Ansible — Create and Start EC2 Instances
 - name: Create EC2 instances
   hosts: localhost
   become: yes
@@ -20,6 +20,7 @@ Ansible — Create and Start EC2 Instances
         instance_type: t2.micro
         image: ami-0abcd1234abcd1234
         wait: yes
+        
 #Terraform — Multi-Region VPC with EC2
 resource "aws_vpc" "us_east_vpc" {
   cidr_block = "10.0.0.0/16"
@@ -42,7 +43,7 @@ resource "aws_instance" "pathnex_ec2_us_west" {
   instance_type = "t2.micro"
   region        = "us-west-1"
 }
-🔹 Kubernetes — Multi-Cluster Deployment with Federation
+#Kubernetes — Multi-Cluster Deployment with Federation
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -77,7 +78,7 @@ spec:
   ports:
     - protocol: TCP
       port: 80
-#Jenkinsfile — Deploy to Multi-Cluster Environments
+🔹 Jenkinsfile — Deploy to Multi-Cluster Environments
 pipeline {
     agent any
     stages {
@@ -105,8 +106,7 @@ pipeline {
         }
     }
 }
-
-#GitLab CI/CD — Multi-Region Deployment with Kubernetes
+🔹 GitLab CI/CD — Multi-Region Deployment with Kubernetes
 stages:
   - build
   - push
@@ -134,7 +134,7 @@ deploy:
       fi
 
 
-#Docker
+🔹 Docker
 # Shell Script Execution
 #!/bin/bash
 echo "Hello Pathnex"
