@@ -19,8 +19,7 @@ Day 16 — Advanced CloudFormation & Multi-Region Deployments
         region: us-west-1
         instance_type: t2.micro
         image: ami-0abcd1234abcd1234
-        wait: yes
-        
+     wait: yes
 #Terraform — Multi-Region VPC with EC2
 resource "aws_vpc" "us_east_vpc" {
   cidr_block = "10.0.0.0/16"
